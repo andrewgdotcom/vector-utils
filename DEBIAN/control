@@ -1,0 +1,11 @@
+Package: vector-utils
+Version: 0.0.1
+Section: main
+Priority: extra
+Architecture: all
+Depends: bash, openssh-client
+Maintainer: andrewg@andrewg.com
+Description: Simple multi-host scatter/gather and command execution
+  A collection of command line scripts to simplify multi-host tasks.
+  Using these tools, we can scatter/gather a selection of files and pass
+  a string of commands to a remote shell on each host.

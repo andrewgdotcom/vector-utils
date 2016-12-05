@@ -1,0 +1,10 @@
+#!/bin/bash
+
+. /usr/local/etc/vector.conf
+
+for i in $MACHINES; do
+ for j in $@; do
+  rsync -a $i:$j $j,$i
+ done
+done
+
