@@ -5,24 +5,24 @@ BINPREFIX = $(PREFIX)/usr/bin
 ETCPREFIX = $(PREFIX)/etc
 
 all: 
-        echo
+	echo
 
 $(BINPREFIX) $(ETCPREFIX):
-        sudo mkdir -p $@
+	sudo mkdir -p $@
 
 install: all $(BINPREFIX) $(ETCPREFIX)
-        sudo cp usr/bin/* $(BINPREFIX)/
-        sudo cp etc/* $(ETCPREFIX)/
-        sudo chmod 755 $(BINPREFIX)/*
+	sudo cp usr/bin/* $(BINPREFIX)/
+	sudo cp etc/* $(ETCPREFIX)/
+	sudo chmod 755 $(BINPREFIX)/*
 
 clean:
-        echo
+	echo
 
 deb: install
-        vi DEBIAN/control
-        sudo cp -R DEBIAN $(PREFIX)/
-        sudo dpkg-deb --build $(PREFIX) $(DPKG_DEST)
+	vi DEBIAN/control
+	sudo cp -R DEBIAN $(PREFIX)/
+	sudo dpkg-deb --build $(PREFIX) $(DPKG_DEST)
 
 deb-clean: clean
-        sudo rm -rf $(BINPREFIX)/* $(ETCPREFIX)/*
+	sudo rm -rf $(BINPREFIX)/* $(ETCPREFIX)/*
 
