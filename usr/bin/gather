@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /usr/local/etc/vector.conf
+. /etc/vector.conf
 
 for i in $MACHINES; do
  for j in $@; do
