@@ -1,9 +1,5 @@
 Package: vector-utils
-<<<<<<< HEAD
-Version: 0.0.2
-=======
 Version: 0.0.3
->>>>>>> e04a527fbcfa2818a0e682bbbebf52a08d1f68f6
 Section: main
 Priority: extra
 Architecture: all
