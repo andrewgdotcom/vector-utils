@@ -1,9 +1,9 @@
 Package: vector-utils
-Version: 0.0.1
+Version: 0.0.2
 Section: main
 Priority: extra
 Architecture: all
-Depends: bash, openssh-client
+Depends: bash, openssh-client, rsync
 Maintainer: andrewg@andrewg.com
 Description: Simple multi-host scatter/gather and command execution
   A collection of command line scripts to simplify multi-host tasks.
